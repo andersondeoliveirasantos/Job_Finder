@@ -10,7 +10,7 @@ app.listen(PORT, function() {
 })
 
 // body_parser
-app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.urlencoded({ extended: false }));
 
 // db connection
 db
@@ -19,13 +19,13 @@ db
     console.log('Connected with the bank successfully'); // Conectou com o banco com sucesso
   })
   .catch(err => {
-    console.log('There was an error connecting', err) // Ocorreu um erro ao conectar
+    console.log('There was an error connecting', err); // Ocorreu um erro ao conectar
   });
 
 // Rotes
 app.get('/', (req, res) => {
-  res.send("It's working 03")
-})
+  res.send('Está funcionando 3');
+});
 
 // jobs routes
-app.use('/jobs', require('./routes/jobs'))
+app.use('/jobs', require('./routes/jobs'));
