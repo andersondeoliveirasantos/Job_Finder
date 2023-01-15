@@ -7,7 +7,7 @@ const PORT = 3000;
 
 app.listen(PORT, function() {
   console.log(`Express is running on the port ${PORT}`);
-})
+});
 
 // body_parser
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -17,7 +17,7 @@ db
   .authenticate()
   .then(() => {
     console.log('Connected with the bank successfully'); // Conectou com o banco com sucesso
-  })
+  });
   .catch(err => {
     console.log('There was an error connecting', err); // Ocorreu um erro ao conectar
   });
